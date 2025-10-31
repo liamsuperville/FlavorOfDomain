@@ -1,0 +1,101 @@
+/* Main CSS entry point for FlavorOfDomain */
+  /* Import modular CSS files */
+  @import './base.css';
+  @import './layout.css';
+  @import './components.css';
+  @import './pages.css';
+  @import './responsive.css';
+
+/* CSS Reset to override Vite defaults */
+:root {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    color-scheme: light;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: block; /* Override flex from Vite defaults */
+    min-width: auto;
+    min-height: 100vh;
+    place-items: normal; /* Override center from Vite defaults */
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #3498db;
+    color: white;
+  }
+  
+  button:hover {
+    border-color: transparent;
+    background-color: #2980b9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #4a6fa5;
+    font-weight: normal;
+  }
+  
+  a:hover {
+    color: #2c3e50;
+  }
+
+  /* Button Fix for Recipe Cards */
+.recipe-card .view-recipe-btn {
+    display: inline-block !important;
+    background-color: #2ecc71 !important;
+    color: white !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+    text-align: center !important;
+    cursor: pointer !important;
+  }
+  
+  .recipe-card .view-recipe-btn:hover {
+    background-color: #27ae60 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    color: white !important;
+  }
+  
+  /* Fix for recipe card footer */
+  .recipe-card-footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  
+  @media (max-width: 576px) {
+    .recipe-card .view-recipe-btn {
+      width: 100% !important;
+    }
+  }
+  
